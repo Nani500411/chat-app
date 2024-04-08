@@ -26,13 +26,6 @@ const userSchema = new mongoose.Schema({
         default:"",
 
     },
-    mobileNumber: {
-        type: Number, // Or you can choose an appropriate data type
-        required: true,
-        min: 1000000000, // Minimum value for a 10-digit number
-        max: 9999999999, // Maximum value for a 10-digit number
-        
-    },
 },{timestamps:true});
 
 const User = mongoose.model("User", userSchema);

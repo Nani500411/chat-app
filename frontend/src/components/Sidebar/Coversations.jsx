@@ -1,35 +1,36 @@
-import React from 'react'
-import Conversation from './Conversation'
+// Conversations.js
+import useGetConversations from "../../hooks/useGetConversations";
+import { getRandomEmoji } from "../../utils/emojis";
+import Conversation from "./Conversation";
+import { useSocketContext } from "../../context/SocketContext";
 
-const Coversations = () => {
-  return (
-    <div className='py-2 flex flex-col overflow-auto'>
-    <Conversation/>
-    <Conversation/>
-    <Conversation/>
-    <Conversation/>
-    <Conversation/>
+const Conversations = () => {
+	const { loading, conversations } = useGetConversations();
+	const { onlineUsers } = useSocketContext();
 
-    
-    </div>
-  )
-}
-export default Coversations
+	// Reorder conversations array to show online users first
+	const sortedConversations = conversations.slice().sort((a, b) => {
+		const aOnline = onlineUsers.includes(a._id);
+		const bOnline = onlineUsers.includes(b._id);
 
-//starter code
-// import React from 'react'
-// import Conversation from './Conversation'
+		if (aOnline && !bOnline) return -1;
+		if (!aOnline && bOnline) return 1;
+		return 0;
+	});
 
-// const Coversations = () => {
-//   return (
-//     <div className='py-2 flex flex-col overflow-auto'>
-//     <Conversation/>
-//     <Conversation/>
-//     <Conversation/>
-//     <Conversation/>
-//     <Conversation/>
-//     </div>
-//   )
-// }
+	return (
+		<div className='py-2 flex flex-col overflow-auto'>
+			{sortedConversations.map((conversation, idx) => (
+				<Conversation
+					key={conversation._id} // Ensure _id is unique for each conversation
+					conversation={conversation}
+					emoji={getRandomEmoji()}
+					lastIdx={idx === sortedConversations.length - 1}
+				/>
+			))}
 
-// export default Coversations
+			{loading ? <span className='loading loading-spinner mx-auto'></span> : null}
+		</div>
+	);
+};
+export default Conversations;

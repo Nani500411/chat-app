@@ -8,9 +8,7 @@ export const signup = async (req, res) => {
     try {
 
         const {fullName,username,password,confirmPassword,gender,mobileNumber} = req.body;
-        if (mobileNumber.length !== 10) {
-            return res.status(400).json({ error: "Mobile number must be 10 characters long" });
-        }
+       
         
         if(password !== confirmPassword){
             return res.status(400).json({error:"password don't match"});
