@@ -28,13 +28,13 @@ const SignUp = () => {
         <div className='signup-container'>
             <div className='signup-form'>
                 <h1 className='signup-heading'>
-                    Sign Up <span className='text-blue-500'> ChatApp</span>
+                    Sign Up <span className='text-blue-500'> Chat</span>
                 </h1>
 
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label className='label'>
-                            <span className='label-text'>Full Name</span>
+                            <span className='label-text'>Nick Name</span>
                         </label>
                         <input
                             type='text'

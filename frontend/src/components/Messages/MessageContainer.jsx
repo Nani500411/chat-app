@@ -40,7 +40,7 @@ const NoChatSelected = () => {
     return (
         <div className='no-chat-selected'>
             <div className='no-chat-selected-content'>
-                <p>Welcome 👋 {authUser.fullName} ❄</p>
+                <p>Welcome {authUser.fullName} </p>
                 <p>Select a chat to start messaging</p>
                 <TiMessages className='message-icon' />
             </div>

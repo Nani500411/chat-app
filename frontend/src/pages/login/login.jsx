@@ -21,7 +21,7 @@ const Login = () => {
         <div className="login-container">
             <div className="login-form">
                 <h1 className="login-heading">
-                    Login <span>ChatApp</span>
+                    Login <span>Chat</span>
                 </h1>
 
                 <form onSubmit={handleSubmit}>
