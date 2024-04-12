@@ -1,0 +1,37 @@
+/* MessageContainer component styles */
+.message-container {
+    min-width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #4b5563;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.header .label-text {
+    color: #fff;
+}
+
+.no-chat-selected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.no-chat-selected-content {
+    text-align: center;
+    color: #cbd5e0;
+}
+
+.no-chat-selected-content p {
+    margin-bottom: 0.5rem;
+}
+
+.no-chat-selected-content .message-icon {
+    font-size: 2rem;
+    color: #cbd5e0;
+}

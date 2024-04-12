@@ -1,0 +1,19 @@
+/* Messages.css */
+
+/* Container for messages */
+.messages-container {
+    padding: 0 3.1rem 0 0.7rem; /* Add padding to the container */
+    flex: 1; /* Take up remaining space */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Individual message wrapper */
+.message-wrapper {
+    margin-bottom: 1rem; /* Add some spacing between messages */
+}
+
+/* Text style for the "Send a message to start the conversation" message */
+.empty-message-text {
+    text-align: center; /* Center the text */
+    color: #6b7280; /* Adjust the text color */
+}

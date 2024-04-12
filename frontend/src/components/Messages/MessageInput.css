@@ -1,0 +1,43 @@
+/* MessageInput.css */
+
+/* Container for the message input form */
+.message-input-container {
+    position: relative;
+    padding: 0 3.3rem 0.2rem 0.8rem;
+    margin-top: 1rem;
+}
+
+/* Input field style */
+.message-input-field {
+    border: 1px solid #4b5563;
+    border-radius: 0.5rem;
+    background-color: #1f2937;
+    color: #d1d5db;
+    padding: 0.5rem 3rem; /* Adjust right padding to accommodate the button */
+    width: 100%;
+    font-size: 0.875rem;
+}
+
+/* Button style */
+.send-button {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Loading spinner style */
+.loading-spinner {
+    border-color: #ffffff transparent transparent;
+}

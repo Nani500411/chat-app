@@ -1,0 +1,42 @@
+/* Home component styles */
+.home-container {
+    display: flex;
+    height: 80%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: rgba(17, 11, 11, 0.5);
+    backdrop-filter: blur(8px);
+    background-clip: padding-box;
+}
+
+.sidebar {
+    flex: 1;
+    /* Add your sidebar styles */
+}
+
+.message-container {
+    flex: 3;
+    /* Add your message container styles */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .home-container {
+        
+        height: 100%;
+        
+    }
+    
+    
+
+   
+
+    .message-container {
+        flex: 1;
+    }
+
+    .sidebar.open {
+        left: 0; /* Show sidebar when it's open */
+       
+    }
+}

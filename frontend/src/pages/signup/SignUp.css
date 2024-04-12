@@ -1,0 +1,84 @@
+/* SignUp component styles */
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 20rem;
+    margin: auto;
+}
+
+.signup-form {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: rgba(17, 17, 17, 0.3);
+    
+}
+
+.signup-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #d1d5db;
+}
+
+.signup-heading span {
+    color: #3b82f6;
+}
+
+.signup-input {
+    width: 100%;
+    height: 2.5rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    color: #111827;
+    font-size: 1rem;
+}
+
+.signup-link {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #3b82f6;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+    color: #2563eb;
+}
+
+.signup-button {
+    width: 100%;
+    height: 2.5rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #2563eb;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.signup-button:disabled {
+    background-color: #a5b4fc;
+    cursor: not-allowed;
+}
+
+.loading-spinner {
+    border-color: #ffffff transparent transparent;
+}
+
+/* Hover effect for button */
+.signup-button:hover {
+    background-color: #3b82f6;
+}
+
+/* Click effect for mobile */
+@media (max-width: 600px) {
+    .signup-button:active {
+        background-color: #4093f1;
+    }
+}

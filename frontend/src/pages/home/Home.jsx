@@ -1,12 +1,15 @@
+import React from 'react';
 import MessageContainer from "../../components/Messages/MessageContainer";
 import Sidebar from "../../components/Sidebar/Sidebar";
+import './Home.css'; // Import CSS file
 
 const Home = () => {
-	return (
-		<div className='flex sm:h-[450px] md:h-[550px] rounded-lg overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
-			<Sidebar />
-			<MessageContainer />
-		</div>
-	);
+    return (
+        <div className='home-container'>
+            <Sidebar className='sidebar' />
+            <MessageContainer className='message-container' />
+        </div>
+    );
 };
+
 export default Home;
